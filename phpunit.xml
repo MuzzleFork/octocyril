@@ -1,0 +1,29 @@
+<phpunit colors="false">
+    <testsuite name="OctoCyril" >
+        <directory>./tests</directory>
+    </testsuite>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../application</directory>
+            <directory suffix=".php">../library</directory>
+            <directory suffix=".php">selenium</directory>
+            <directory suffix=".php">functional</directory>
+            <exclude>
+                <directory suffix=".php">../library/ZFDebug</directory>
+                <directory suffix=".php">../library/Atlas/Controller/Plugin/Debug</directory>
+                <directory suffix=".phtml">../application/</directory>
+                <directory suffix=".php">../application/tools</directory>
+                <file>../application/Bootstrap.php</file>
+                <file>../application/cli_bootstrap.php</file>
+	            <directory suffix=".php">../library/Zend</directory>
+	            <directory suffix=".php">../library/PaypalOAuthKit</directory>
+                <directory suffix=".php">../library/GoogleApi</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <logging>
+    	<log type="junit" target="./test-results/phpunit.xml" logIncompleteSkipped="false"/>
+    </logging>
+
+</phpunit>

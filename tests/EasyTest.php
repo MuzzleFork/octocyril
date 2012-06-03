@@ -5,6 +5,6 @@ class EasyTest extends PHPUnit_Framework_TestCase
 
 	public function testOne()
 	{
-		$this->assertTrue(TRUE, "Failed to assert true");
+		$this->assertTrue("red", "Failed to assert true");
 	}
 }
